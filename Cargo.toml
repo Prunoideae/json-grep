@@ -1,0 +1,27 @@
+[package]
+name = "json-grep"
+version = "0.1.0"
+authors = ["Prunoideae <a455167189@163.com>"]
+edition = "2018"
+autotests = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+bench = false
+path = "crates/core/main.rs"
+name = "jg"
+
+[workspace]
+members = ["crates/jg"]
+
+[dependencies]
+log = "0.4.5"
+serde_json = "1.0.23"
+clap = "2.33.3"
+regex = "1.4.3"
+jg = { version = "0.1.0", path = "crates/jg" }
+
+[dev-dependencies]
+serde = "1.0.77"
+serde_derive = "1.0.77"
+walkdir = "2"
