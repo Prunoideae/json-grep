@@ -30,7 +30,7 @@ cat numbers.txt
     }
 ]
 
-cat numbers.txt | jg {"id":"^2.*$","attr.*":{"gender":"female"}}
+cat numbers.txt | jg "{\"id\":\"^2.*$\",\"attr.*\":{\"gender\":\"female\"}}"
 [
     {
         "id": 2001,
